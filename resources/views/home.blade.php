@@ -39,9 +39,7 @@
                     <li><a class="hover:text-indigo-400 transition-colors" href="#about">About</a></li>
                     <li><a class="hover:text-indigo-400 transition-colors" href="#projects">Portfolio</a></li>
                     <li><a class="hover:text-indigo-400 transition-colors" href="#contact">Contact</a></li>
-                    @auth
-                        <li><a class="text-indigo-500 hover:text-indigo-400 font-bold" href="{{ route('dashboard') }}">Dashboard</a></li>
-                    @endauth
+                    
                 </ul>
             </div>
 
