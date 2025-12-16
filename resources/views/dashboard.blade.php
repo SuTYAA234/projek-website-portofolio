@@ -20,7 +20,7 @@
     
     <div class="mt-4">
         <a href="{{ route('projects.index') }}" class="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded">
-            Kelola Portfolio Saya
+            Kelola Portofolio Saya
         <a href="{{ route('contacts.index') }}" class="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded ms-2">
             Lihat Pesan Masuk
 </a>

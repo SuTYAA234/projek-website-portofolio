@@ -21,6 +21,7 @@
     </style>
 </head>
 
+{{-- desain halaman --}}
 <body class="antialiased">
 
     <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800">
@@ -58,6 +59,7 @@
         </div>
     </nav>
 
+    {{-- halaman perkenalan --}}
     <section id="home" class="section-padding min-h-screen flex items-center pt-32">
         <div class="container mx-auto px-4">
             <div class="flex flex-col-reverse lg:flex-row items-center gap-12">
@@ -87,6 +89,7 @@
         </div>
     </section>
 
+    {{-- untuk bagian projek --}}
     <section id="projects" class="section-padding bg-zinc-900/50">
         <div class="container mx-auto px-4">
             <h3 class="text-3xl font-bold mb-12 text-center lg:text-left">Projek Terbaru</h3>
@@ -155,63 +158,77 @@
             </div>
         </div>
     </section>
-
+    
+    {{-- untuk desain skill --}}
     <section id="contact" class="section-padding bg-zinc-900/50">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <div data-aos="fade-right">
-                    <h3 class="text-3xl font-bold mb-8">Skills</h3>
-                    <div class="space-y-8">
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-zinc-800 text-indigo-400 rounded-xl flex items-center justify-center text-2xl mr-6 shrink-0 border border-zinc-700 shadow-md"><i class="bi bi-globe"></i></div>
-                            <div class="w-full">
-                                <div class="flex justify-between font-semibold text-zinc-300 mb-2"><span>Web Development</span><span class="text-indigo-400">50%</span></div>
-                                <div class="h-3 bg-zinc-800 rounded-full overflow-hidden border border-zinc-700/50"><div class="h-full bg-indigo-600 rounded-full shadow-[0_0_10px_rgba(79,70,229,0.5)]" style="width: 50%"></div></div>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-zinc-800 text-indigo-400 rounded-xl flex items-center justify-center text-2xl mr-6 shrink-0 border border-zinc-700 shadow-md"><i class="bi bi-filetype-html"></i></div>
-                            <div class="w-full">
-                                <div class="flex justify-between font-semibold text-zinc-300 mb-2"><span>HTML & CSS</span><span class="text-indigo-400">70%</span></div>
-                                <div class="h-3 bg-zinc-800 rounded-full overflow-hidden border border-zinc-700/50"><div class="h-full bg-indigo-600 rounded-full shadow-[0_0_10px_rgba(79,70,229,0.5)]" style="width: 70%"></div></div>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-zinc-800 text-indigo-400 rounded-xl flex items-center justify-center text-2xl mr-6 shrink-0 border border-zinc-700 shadow-md"><i class="bi bi-code-slash"></i></div>
-                            <div class="w-full">
-                                <div class="flex justify-between font-semibold text-zinc-300 mb-2"><span>PHP & Laravel</span><span class="text-indigo-400">65%</span></div>
-                                <div class="h-3 bg-zinc-800 rounded-full overflow-hidden border border-zinc-700/50"><div class="h-full bg-indigo-600 rounded-full shadow-[0_0_10px_rgba(79,70,229,0.5)]" style="width: 65%"></div></div>
-                            </div>
-                        </div>
-                         <div class="flex items-start">
-                            <div class="w-12 h-12 bg-zinc-800 text-indigo-400 rounded-xl flex items-center justify-center text-2xl mr-6 shrink-0 border border-zinc-700 shadow-md"><i class="bi bi-layout-text-window-reverse"></i></div>
-                            <div class="w-full">
-                                <div class="flex justify-between font-semibold text-zinc-300 mb-2"><span>UI/UX Design</span><span class="text-indigo-400">50%</span></div>
-                                <div class="h-3 bg-zinc-800 rounded-full overflow-hidden border border-zinc-700/50"><div class="h-full bg-indigo-600 rounded-full shadow-[0_0_10px_rgba(79,70,229,0.5)]" style="width: 50%"></div></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div data-aos="fade-left">
-                    <div class="card-dark p-8 lg:p-10">
-                        <h3 class="text-3xl font-bold mb-8">Contact Me</h3>
-                        @if(session('success'))
-                            <div class="bg-green-900/30 border border-green-600 text-green-300 px-4 py-3 rounded-lg mb-6 flex items-center" role="alert">
-                                <i class="bi bi-check-circle-fill mr-3"></i> <span>{{ session('success') }}</span>
-                            </div>
-                        @endif
-                        <form action="{{ route('contact.store') }}" method="POST" class="space-y-6">
-                            @csrf
-                            <div><label class="block text-zinc-400 text-sm font-semibold mb-2 pl-1">Name</label><input type="text" name="name" class="form-input-dark" placeholder="Nama Lengkap" required></div>
-                            <div><label class="block text-zinc-400 text-sm font-semibold mb-2 pl-1">Email</label><input type="email" name="email" class="form-input-dark" placeholder="alamat@email.com" required></div>
-                            <div><label class="block text-zinc-400 text-sm font-semibold mb-2 pl-1">Message</label><textarea name="message" rows="5" class="form-input-dark resize-none" placeholder="Tulis pesan Anda di sini..." required></textarea></div>
-                            <button type="submit" class="btn-custom-indigo w-full text-lg">Send Message <i class="bi bi-send-fill ml-2"></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+        <div data-aos="fade-right">
+    <h3 class="text-3xl font-bold mb-8">Tech Stack & Tools</h3>
+    <p class="text-zinc-400 mb-6">Teknologi yang saya gunakan untuk membangun aplikasi:</p>
+    
+    <div class="flex flex-wrap gap-3">
+        
+        <div class="flex items-center space-x-2 bg-zinc-800/80 border border-zinc-700 px-4 py-2.5 rounded-xl hover:border-red-500/50 hover:bg-zinc-800 transition-all cursor-default group">
+            <img src="https://laravel.com/img/logomark.min.svg" class="w-6 h-6 group-hover:scale-110 transition-transform" alt="Laravel Logo">
+            <span class="text-zinc-300 font-medium group-hover:text-white">Laravel</span>
         </div>
+
+        <div class="flex items-center space-x-2 bg-zinc-800/80 border border-zinc-700 px-4 py-2.5 rounded-xl hover:border-indigo-400/50 hover:bg-zinc-800 transition-all cursor-default group">
+            <i class="bi bi-filetype-php text-2xl text-indigo-400 group-hover:scale-110 transition-transform"></i>
+            <span class="text-zinc-300 font-medium group-hover:text-white">PHP</span>
+        </div>
+
+        <div class="flex items-center space-x-2 bg-zinc-800/80 border border-zinc-700 px-4 py-2.5 rounded-xl hover:border-yellow-400/50 hover:bg-zinc-800 transition-all cursor-default group">
+            <i class="bi bi-filetype-js text-2xl text-yellow-400 group-hover:scale-110 transition-transform"></i>
+            <span class="text-zinc-300 font-medium group-hover:text-white">JavaScript</span>
+        </div>
+
+        <div class="flex items-center space-x-2 bg-zinc-800/80 border border-zinc-700 px-4 py-2.5 rounded-xl hover:border-blue-400/50 hover:bg-zinc-800 transition-all cursor-default group">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 group-hover:scale-110 transition-transform" viewBox="0 0 448 512"><path fill="#3776AB" d="M439.8 209.8c0-97.2-71.4-121.3-116.7-121.3-26.9 0-55.7 8.4-76.6 16.1v29.6c17.9-6.1 39.1-13.9 66.2-13.9 45.9 0 72.7 25.5 72.7 62.5v4.4h-55.1c-78.3 0-120.7 37.7-120.7 87.1 0 51.3 41.5 85.5 109.5 85.5 33.1 0 66.4-9.6 86.3-21.3l2.6 12.4h38.3V218.7c0-3.8.2-6.8.2-8.9zM246.4 330c-16.1 8.4-38.7 13.9-59.6 13.9-33.8 0-53.9-17.5-53.9-47.3 0-33.1 26.1-51.1 72.7-51.1h40.9v84.5zm-86-263.4C260.2 13.8 332.6 0 407.8 0v107.5h-39.3c-35.9 0-59.4 18.1-59.4 47.3v33.1h98.6l-4.4 53.9h-94.2v168.5c26.9 8.4 55.7 13.3 85.5 13.3 81.6 0 148.1-27.9 148.1-133.1V245H292.3v-39.6h144c1.8-7.6 2.6-15.3 2.6-23.1 0-66.7-20.3-107.8-77.5-107.8-37.5 0-68.1 12.8-92.3 32.1L246.4 66.6z"/></svg>
+            <span class="text-zinc-300 font-medium group-hover:text-white">Python</span>
+        </div>
+
+        <div class="flex items-center space-x-2 bg-zinc-800/80 border border-zinc-700 px-4 py-2.5 rounded-xl hover:border-red-400/50 hover:bg-zinc-800 transition-all cursor-default group">
+            <i class="bi bi-filetype-java text-2xl text-red-500 group-hover:scale-110 transition-transform"></i>
+            <span class="text-zinc-300 font-medium group-hover:text-white">Java</span>
+        </div>
+
+        <div class="flex items-center space-x-2 bg-zinc-800/80 border border-zinc-700 px-4 py-2.5 rounded-xl hover:border-blue-600/50 hover:bg-zinc-800 transition-all cursor-default group">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 group-hover:scale-110 transition-transform" viewBox="0 0 384 512"><path fill="#00599C" d="M329.1 142.9c-62.5-62.5-163.8-62.5-226.3 0s-62.5 163.8 0 226.3s163.8 62.5 226.3 0c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3c-87.5 87.5-229.3 87.5-316.8 0s-87.5-229.3 0-316.8s229.3-87.5 316.8 0c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0zM239.5 251.4h40.2c6.4 0 11.6 5.2 11.6 11.6v8.3c0 6.4-5.2 11.6-11.6 11.6h-40.2v40.2c0 6.4-5.2 11.6-11.6 11.6h-8.3c-6.4 0-11.6-5.2-11.6-11.6v-40.2h-40.2c-6.4 0-11.6-5.2-11.6-11.6v-8.3c0-6.4 5.2-11.6 11.6-11.6h40.2v-40.2c0-6.4 5.2-11.6 11.6-11.6h8.3c6.4 0 11.6 5.2 11.6 11.6v40.2zm108 0h40.2c6.4 0 11.6 5.2 11.6 11.6v8.3c0 6.4-5.2 11.6-11.6 11.6h-40.2v40.2c0 6.4-5.2 11.6-11.6 11.6h-8.3c-6.4 0-11.6-5.2-11.6-11.6v-40.2h-40.2c-6.4 0-11.6-5.2-11.6-11.6v-8.3c0-6.4 5.2-11.6 11.6-11.6h40.2v-40.2c0-6.4 5.2-11.6 11.6-11.6h8.3c6.4 0 11.6 5.2 11.6 11.6v40.2z"/></svg>
+            <span class="text-zinc-300 font-medium group-hover:text-white">C++</span>
+        </div>
+
+        <div class="flex items-center space-x-2 bg-zinc-800/80 border border-zinc-700 px-4 py-2.5 rounded-xl hover:border-orange-500/50 hover:bg-zinc-800 transition-all cursor-default group">
+            <i class="bi bi-filetype-html text-2xl text-orange-500 group-hover:scale-110 transition-transform"></i>
+            <span class="text-zinc-300 font-medium group-hover:text-white">HTML5</span>
+        </div>
+
+        <div class="flex items-center space-x-2 bg-zinc-800/80 border border-zinc-700 px-4 py-2.5 rounded-xl hover:border-blue-500/50 hover:bg-zinc-800 transition-all cursor-default group">
+            <i class="bi bi-filetype-css text-2xl text-blue-500 group-hover:scale-110 transition-transform"></i>
+            <span class="text-zinc-300 font-medium group-hover:text-white">CSS3</span>
+        </div>
+
+        <div class="flex items-center space-x-2 bg-zinc-800/80 border border-zinc-700 px-4 py-2.5 rounded-xl hover:border-cyan-400/50 hover:bg-zinc-800 transition-all cursor-default group">
+            <i class="bi bi-wind text-2xl text-cyan-400 group-hover:scale-110 transition-transform"></i>
+            <span class="text-zinc-300 font-medium group-hover:text-white">Tailwind</span>
+        </div>
+        
+        <div class="flex items-center space-x-2 bg-zinc-800/80 border border-zinc-700 px-4 py-2.5 rounded-xl hover:border-purple-500/50 hover:bg-zinc-800 transition-all cursor-default group">
+            <i class="bi bi-bootstrap text-2xl text-purple-500 group-hover:scale-110 transition-transform"></i>
+            <span class="text-zinc-300 font-medium group-hover:text-white">Bootstrap</span>
+        </div>
+
+        <div class="flex items-center space-x-2 bg-zinc-800/80 border border-zinc-700 px-4 py-2.5 rounded-xl hover:border-orange-600/50 hover:bg-zinc-800 transition-all cursor-default group">
+            <i class="bi bi-git text-2xl text-orange-600 group-hover:scale-110 transition-transform"></i>
+            <span class="text-zinc-300 font-medium group-hover:text-white">Git</span>
+        </div>
+
+        <div class="flex items-center space-x-2 bg-zinc-800/80 border border-zinc-700 px-4 py-2.5 rounded-xl hover:border-pink-500/50 hover:bg-zinc-800 transition-all cursor-default group">
+            <i class="bi bi-bezier2 text-2xl text-pink-500 group-hover:scale-110 transition-transform"></i>
+            <span class="text-zinc-300 font-medium group-hover:text-white">UI/UX Design</span>
+        </div>
+
+    </div>
+</div>
     </section>
 
     <footer class="py-8 text-center text-zinc-500 border-t border-zinc-800 bg-zinc-950">
