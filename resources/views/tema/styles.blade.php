@@ -1,4 +1,4 @@
-<style type="text/tailwindcss">
+{{-- <style type="text/tailwindcss">
     /* Import Google Font Poppins */
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
     
@@ -40,4 +40,4 @@
             @apply py-20 lg:py-28;
         }
     }
-</style>
+</style> --}}

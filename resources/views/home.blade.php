@@ -252,7 +252,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer style="text-align: center;">
         <div class="container">
             <small>&copy; {{ date('Y') }} Sutya.</small>
         </div>
