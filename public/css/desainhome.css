@@ -12,6 +12,9 @@
     --text-muted: #a1a1aa;    /* Zinc-400 */
     --border: #27272a;        /* Zinc-800 */
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Tambahan Warna Aksen untuk Nama */
+    --gradient-text: linear-gradient(90deg, #8a2be2, #4ade80);
 }
 
 * {
@@ -67,8 +70,8 @@ ul { list-style: none; }
     width: 100%;
     padding: 1rem 0;
     z-index: 1000;
-    background: rgba(9, 9, 11, 0.7); /* Transparan */
-    backdrop-filter: blur(12px);     /* Efek Kaca Buram */
+    background: rgba(9, 9, 11, 0.8); /* Sedikit lebih gelap agar teks jelas */
+    backdrop-filter: blur(12px);    
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -83,9 +86,6 @@ ul { list-style: none; }
     font-weight: 700;
     color: var(--text-main);
     letter-spacing: 1px;
-    background: linear-gradient(to right, #fff, #a5b4fc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .nav-links {
@@ -114,7 +114,7 @@ ul { list-style: none; }
 }
 
 .mobile-menu {
-    display: none; /* Logic JS akan mengubah ini */
+    display: none; 
     background: var(--bg-card);
     padding: 1rem;
     border-radius: 8px;
@@ -125,7 +125,7 @@ ul { list-style: none; }
 .mobile-menu ul li { margin-bottom: 10px; }
 
 /* =========================================
-   3. HERO SECTION (UNIQUE LAYOUT)
+   3. HERO SECTION (BAGIAN UTAMA YANG DIUBAH)
    ========================================= */
 .hero-wrapper {
     padding-top: 140px;
@@ -147,64 +147,80 @@ ul { list-style: none; }
     flex: 1;
 }
 
-.hero-text h1 {
-    font-size: 3.5rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-}
-
-.highlight {
-    color: var(--primary);
-    position: relative;
-    display: inline-block;
-}
-
-/* Garis bawah artistik pada nama */
-.highlight::after {
-    content: '';
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    width: 100%;
-    height: 8px;
-    background: var(--primary-glow);
-    z-index: -1;
-    border-radius: 4px;
-}
-
-.subtitle {
-    font-size: 1.25rem;
+/* Greeting (Hai, Saya...) */
+.hero-text .greeting {
+    font-size: 1.5rem;
+    font-weight: 600;
     color: var(--text-muted);
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* --- PERBAIKAN NAMA (Focus Memanjang & Tidak Timpa) --- */
+.hero-text h1.name {
+    font-size: 3.5rem; /* Ukuran besar */
+    font-weight: 700;
+    
+    /* Mencegah teks menimpa baris bawahnya */
+    line-height: 1.3; 
+    margin-bottom: 15px;
+    
+    /* Efek Warna Gradasi (Lebih Menarik) */
+    background: var(--gradient-text); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Memastikan spasi aman */
+    padding-bottom: 5px; 
+}
+
+.role {
+    font-size: 1.25rem;
+    color: #4ade80; /* Warna hijau neon lembut */
     margin-bottom: 1.5rem;
-    font-weight: 400;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .description {
     color: #d4d4d8;
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
     max-width: 600px;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Badge Pendidikan Baru */
+.education-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    margin-bottom: 30px;
+    border-left: 3px solid var(--primary);
 }
 
 /* Tombol Utama */
 .btn-primary {
     display: inline-block;
-    padding: 12px 32px;
-    background: var(--primary);
+    padding: 12px 35px;
+    background: linear-gradient(90deg, #6366f1, #818cf8);
     color: white;
     border-radius: 50px;
     font-weight: 600;
-    box-shadow: 0 0 20px var(--primary-glow);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
     border: 1px solid transparent;
+    transition: transform 0.3s ease;
 }
 
 .btn-primary:hover {
-    background: transparent;
-    border-color: var(--primary);
-    color: var(--primary);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
 }
 
-/* Hero Image dengan Efek Glow */
+/* Hero Image dengan Efek Blob */
 .hero-image {
     flex: 1;
     display: flex;
@@ -212,15 +228,19 @@ ul { list-style: none; }
     position: relative;
 }
 
-.image-container {
-    width: 350px;
-    height: 350px;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Bentuk Organik */
+.image-container { /* Di sini saya ganti nama class jadi .img-wrapper di HTML sebelumnya, sesuaikan salah satu */
+    /* Saya pakai styling .img-wrapper dari saran saya sebelumnya tapi disesuaikan dgn nama image-container kamu */
+    width: 380px;
+    height: 380px;
+    background-color: #1f2833;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; /* Bentuk Organik */
     overflow: hidden;
     position: relative;
     border: 2px solid rgba(255,255,255,0.1);
     animation: morph 8s ease-in-out infinite;
-    box-shadow: 0 0 50px rgba(99, 102, 241, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Foto mulai dari bawah */
 }
 
 .image-container img {
@@ -247,6 +267,7 @@ ul { list-style: none; }
     margin-bottom: 3rem;
     text-align: center;
     position: relative;
+    color: white;
 }
 
 .section-title::after {
@@ -456,8 +477,16 @@ input:focus, textarea:focus {
         text-align: center;
         padding-top: 2rem;
     }
+    
+    .hero-text {
+        padding-right: 0;
+    }
 
-    .hero-text h1 { font-size: 2.5rem; }
+    /* Penyesuaian Font Nama di HP agar tidak hancur */
+    .hero-text h1.name { 
+        font-size: 2.2rem; 
+        line-height: 1.2;
+    }
     
     .contact-layout {
         grid-template-columns: 1fr;
@@ -472,8 +501,8 @@ input:focus, textarea:focus {
     .form-row { grid-template-columns: 1fr; }
     
     .image-container {
-        width: 280px;
-        height: 280px;
+        width: 250px;
+        height: 250px;
     }
 }
 
@@ -489,13 +518,6 @@ input:focus, textarea:focus {
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--transition);
+    display: none; /* Logic via JS */
     z-index: 999;
-}
-
-#back-to-top.visible {
-    opacity: 1;
-    visibility: visible;
 }
