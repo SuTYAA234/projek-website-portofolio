@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    {{-- CSS Kustom Kita (Tanpa Tailwind) --}}
+    {{-- CSS Kustom  --}}
     <link rel="stylesheet" href="{{ asset('css/desainhome.css') }}">
     
     {{-- Jika ada style tambahan lain --}}
@@ -243,7 +243,6 @@
                         <p style="color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 1rem;">Atau hubungi saya melalui:</p>
                         <div style="display: flex; gap: 1rem;">
                             <a href="https://github.com/SuTYAA234?tab=repositories" style="width: 2.5rem; height: 2.5rem; border-radius: 50%; background: #27272a; display: flex; align-items: center; justify-content: center; color: #a1a1aa; text-decoration: none;"><i class="bi bi-github"></i></a>
-                            <a href="#" style="width: 2.5rem; height: 2.5rem; border-radius: 50%; background: #27272a; display: flex; align-items: center; justify-content: center; color: #a1a1aa; text-decoration: none;"><i class="bi bi-whatsapp"></i></a>
                         </div>
                     </div>
                 </div>

@@ -30,6 +30,7 @@
                     <h1 class="text-3xl lg:text-5xl font-bold mb-4 text-white">{{ $project->title }}</h1>
                     <p class="text-zinc-500">
                         Diposting pada {{ $project->created_at->format('d F Y') }}
+
                     </p>
                 </div>
 
@@ -39,6 +40,7 @@
                     @else
                         <div class="h-64 flex items-center justify-center bg-zinc-800">
                             <i class="bi bi-image text-6xl text-zinc-600"></i>
+                            
                         </div>
                     @endif
                 </div>
@@ -47,6 +49,15 @@
                     {!! nl2br(e($project->description)) !!}
                 </div>
 
+                @if($project->link)
+                    <div class="flex justify-center mt-12 mb-8">
+                        <a href="{{ $project->link }}" target="_blank" class="inline-flex items-center gap-3 px-8 py-3 bg-zinc-800 hover:bg-zinc-700 text-white font-semibold rounded-xl border border-zinc-700 transition-all duration-300 hover:scale-105 shadow-lg shadow-zinc-900/50">
+                            <i class="bi bi-github text-xl"></i>
+                            
+                            <span>Lihat Repository</span>
+                      </a>
+                     </div>
+                @endif
 
             </div>
         </div>

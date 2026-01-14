@@ -32,6 +32,7 @@
                         <label>Gambar Project</label>
                         <input type="file" name="image" class="form-control" required>
                     </div>
+                    
 
                     <button type="submit" class="btn btn-primary">Simpan Data</button>
                     <a href="{{ route('projects.index') }}" class="btn btn-secondary">Kembali</a>
