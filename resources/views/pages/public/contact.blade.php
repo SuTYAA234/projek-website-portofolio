@@ -52,7 +52,8 @@
               <h3>Get In Touch</h3>
               <p>Ceritakan detail proyek Anda.</p>
 
-              <form action="forms/contact.php" method="post" class="php-email-form">
+              <form action="{{ route('contact.store') }}" method="POST">
+                @csrf
                 <div class="row gy-4">
 
                   <div class="col-md-6">
@@ -64,18 +65,10 @@
                   </div>
 
                   <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                  </div>
-
-                  <div class="col-12">
                     <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
                   </div>
-
                   <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
+                    
                     <button type="submit" class="btn">Send Message</button>
                   </div>
 
@@ -90,3 +83,5 @@
       </div>
 
     </section><!-- /Contact Section -->
+
+ 
